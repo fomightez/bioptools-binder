@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# ----------Install bioptools -------------
+# based on https://github.com/ACRMGroup/bioptools/blob/master/INSTALL.md
+# and https://github.com/ACRMGroup/bioptools/issues/14
+set -e
+
+bptVERS=1.10
+
+mkdir -p \
+	$HOME/.local/bin \
+	$HOME/bioptools
+
+echo "::: install bioptools ${bptVERS}..."
+
+curl -OL https://github.com/ACRMGroup/bioptools/archive/V${bptVERS}.tar.gz
+tar -C $HOME/bioptools -xvzf V${bptVERS}.tar.gz
+cd ~/bioptools
+cd bioptools-${bptVERS}
+cd src
+./makemake.pl -bioplib
+make
+make install
+
+
+
