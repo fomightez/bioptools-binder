@@ -3,6 +3,7 @@
 # ----------Install bioptools -------------
 # based on https://github.com/ACRMGroup/bioptools/blob/master/INSTALL.md
 # and https://github.com/ACRMGroup/bioptools/issues/14
+# (with https://github.com/fomightez/gohugo-binder/blob/master/postBuild & https://github.com/fomightez/birch-binder/blob/master/postBuild as help for shell code and install approaches with MyBinder)
 set -e
 
 bptVERS=1.10
